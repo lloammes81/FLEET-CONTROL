@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512">
+  <defs>
+    <!-- Metal frame -->
+    <linearGradient id="frameMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.18" stop-color="#cfcfcf"/>
+      <stop offset="0.45" stop-color="#f8f8f8"/>
+      <stop offset="0.75" stop-color="#b9b9b9"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+
+    <!-- Inner dark panel -->
+    <radialGradient id="panel" cx="55%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#274b7a"/>
+      <stop offset="0.45" stop-color="#0f2c56"/>
+      <stop offset="1" stop-color="#07162f"/>
+    </radialGradient>
+
+    <!-- Top gloss -->
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.35" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Globe shade -->
+    <radialGradient id="globe" cx="55%" cy="40%" r="70%">
+      <stop offset="0" stop-color="#1b4f9a" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#0c2c5a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#07162f" stop-opacity="0.95"/>
+    </radialGradient>
+
+    <!-- Neon cyan -->
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#74f0ff"/>
+      <stop offset="1" stop-color="#00b8ff"/>
+    </linearGradient>
+
+    <!-- White title bevel -->
+    <linearGradient id="titleWhite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#f0f4ff"/>
+      <stop offset="1" stop-color="#cfd8ea"/>
+    </linearGradient>
+
+    <!-- Truck blue -->
+    <linearGradient id="truckBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2bb6ff"/>
+      <stop offset="0.45" stop-color="#1e6fcb"/>
+      <stop offset="1" stop-color="#0b2a5a"/>
+    </linearGradient>
+
+    <!-- Pin metal -->
+    <linearGradient id="pinMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#dfe6f2"/>
+      <stop offset="1" stop-color="#b7c3d8"/>
+    </linearGradient>
+
+    <!-- Neon wheel -->
+    <radialGradient id="neon" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#a9ffff"/>
+      <stop offset="0.45" stop-color="#00d6ff"/>
+      <stop offset="1" stop-color="#004cff" stop-opacity="0.15"/>
+    </radialGradient>
+
+    <!-- Shadows -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <!-- Clip rounded -->
+    <clipPath id="clip">
+      <rect x="44" y="44" width="424" height="424" rx="92"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer frame -->
+  <rect x="28" y="28" width="456" height="456" rx="102" fill="url(#frameMetal)"/>
+
+  <!-- Inner panel (clipped) -->
+  <g clip-path="url(#clip)">
+    <rect x="44" y="44" width="424" height="424" rx="92" fill="url(#panel)"/>
+    <path d="M44 68 C140 35, 372 35, 468 68 L468 120 C372 88, 140 88, 44 120 Z"
+          fill="url(#gloss)"/>
+
+    <!-- Globe -->
+    <g opacity="0.9" filter="url(#softShadow)">
+      <circle cx="348" cy="236" r="170" fill="url(#globe)" opacity="0.65"/>
+      <!-- grid -->
+      <g stroke="#8fc7ff" stroke-opacity="0.22" stroke-width="2" fill="none">
+        <path d="M190 180 C260 210, 438 210, 506 180"/>
+        <path d="M175 220 C255 250, 445 250, 520 220"/>
+        <path d="M175 260 C255 290, 445 290, 520 260"/>
+        <path d="M190 300 C260 330, 438 330, 506 300"/>
+        <path d="M255 95 C235 155, 235 315, 255 385"/>
+        <path d="M305 75 C290 150, 290 330, 305 410"/>
+        <path d="M355 70 C350 150, 350 340, 355 420"/>
+        <path d="M405 80 C410 155, 410 325, 405 400"/>
+      </g>
+      <!-- continents hint -->
+      <path d="M420 180 C402 170, 385 175, 375 190 C365 205, 375 220, 392 224
+               C410 228, 420 240, 412 252 C404 265, 380 268, 365 260
+               C350 252, 330 255, 322 270 C312 288, 325 305, 348 308
+               C372 311, 385 330, 372 350 C358 372, 320 372, 300 355
+               C280 338, 255 342, 245 360"
+            fill="#b9dcff" opacity="0.12"/>
+    </g>
+
+    <!-- Text -->
+    <g filter="url(#softShadow)">
+      <text x="345" y="215" text-anchor="middle"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="58" font-weight="900"
+            fill="url(#titleWhite)" letter-spacing="1.5">FLEET</text>
+      <text x="345" y="265" text-anchor="middle"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="46" font-weight="900"
+            fill="url(#cyan)" letter-spacing="1.2">CONTROL</text>
+    </g>
+
+    <!-- Road -->
+    <g filter="url(#softShadow)">
+      <path d="M138 430 L312 250" stroke="#bfc8d8" stroke-width="34" stroke-linecap="round" opacity="0.55"/>
+      <path d="M152 438 L330 252" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.38"/>
+      <path d="M160 430 L286 300" stroke="#0b2a5a" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+      <path d="M166 410 L186 392" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+      <path d="M196 380 L216 360" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+      <path d="M226 350 L246 330" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+    </g>
+
+    <!-- Left icon group -->
+    <g transform="translate(78,122)" filter="url(#softShadow)">
+      <!-- WiFi -->
+      <g fill="none" stroke="url(#cyan)" stroke-linecap="round" opacity="0.95">
+        <path d="M48 22 C74 0, 110 0, 136 22" stroke-width="10"/>
+        <path d="M62 44 C82 30, 102 30, 122 44" stroke-width="10"/>
+        <path d="M78 66 C88 60, 96 60, 106 66" stroke-width="10"/>
+      </g>
+
+      <!-- Truck (front view stylized) -->
+      <g transform="translate(34,60)">
+        <!-- body -->
+        <path d="M30 40
+                 C34 18, 56 6, 82 6
+                 H118
+                 C142 6, 160 18, 166 40
+                 L176 70
+                 V140
+                 C176 154, 166 164, 152 164
+                 H44
+                 C30 164, 20 154, 20 140
+                 V70 Z"
+              fill="url(#truckBlue)"/>
+        <!-- roof light -->
+        <rect x="64" y="18" width="72" height="10" rx="5" fill="#ffcc66" opacity="0.7"/>
+        <!-- windshield -->
+        <path d="M48 44 H148
+                 C154 44, 158 48, 158 54
+                 V78
+                 C158 84, 154 88, 148 88
+                 H48
+                 C42 88, 38 84, 38 78
+                 V54
+                 C38 48, 42 44, 48 44 Z"
+              fill="#0a234a" opacity="0.95"/>
+        <!-- grill -->
+        <rect x="70" y="96" width="66" height="52" rx="8" fill="#0b1b33" opacity="0.9"/>
+        <g stroke="#cfd8ea" stroke-width="3" opacity="0.6">
+          <line x1="78" y1="106" x2="128" y2="106"/>
+          <line x1="78" y1="118" x2="128" y2="118"/>
+          <line x1="78" y1="130" x2="128" y2="130"/>
+          <line x1="78" y1="142" x2="128" y2="142"/>
+        </g>
+        <!-- headlights -->
+        <path d="M34 104 H58 V122 H34 Z" fill="#dfe7f6" opacity="0.9"/>
+        <path d="M148 104 H172 V122 H148 Z" fill="#dfe7f6" opacity="0.9"/>
+        <path d="M36 114 H56" stroke="#ffcc66" stroke-width="3" opacity="0.8"/>
+        <path d="M150 114 H170" stroke="#ffcc66" stroke-width="3" opacity="0.8"/>
+      </g>
+
+      <!-- Target rings -->
+      <g transform="translate(60,304)">
+        <ellipse cx="36" cy="18" rx="74" ry="26" fill="none" stroke="#cfd7e6" stroke-width="6" opacity="0.8"/>
+        <ellipse cx="36" cy="18" rx="50" ry="18" fill="none" stroke="url(#cyan)" stroke-width="6" opacity="0.55"/>
+        <path d="M-12 18 H84" stroke="#ffffff" stroke-width="4" opacity="0.25" stroke-linecap="round"/>
+        <path d="M36 -8 V44" stroke="#ffffff" stroke-width="4" opacity="0.25" stroke-linecap="round"/>
+      </g>
+
+      <!-- GPS pin -->
+      <g transform="translate(70,265)">
+        <path d="M44 26
+                 C44 6, 28 -8, 8 -8
+                 C-12 -8, -28 6, -28 26
+                 C-28 52, 8 92, 8 92
+                 C8 92, 44 52, 44 26 Z"
+              fill="url(#pinMetal)"/>
+        <circle cx="8" cy="26" r="14" fill="#0a234a"/>
+        <circle cx="8" cy="26" r="10" fill="url(#neon)"/>
+      </g>
+    </g>
+  </g>
+</svg>
